@@ -1,22 +1,32 @@
-
 :root {
     --x: rgb(11, 11, 63);
-
 }
+
 * {
-    font-family: "Pacifico", cursive;
-    margin: 0px;
-    padding: 0px;
+    font-family: "Playfair Display", serif;
+    margin: 0;
+    padding: 0;
     color: var(--x);
+    scroll-behavior: smooth;
 }
 
+/* Logo */
 #logo {
-    height: 100px;
+    height: 70px;
 }
 
+/* Navbar */
+.navbar {
+    background-color: white !important;
+}
+
+.nav-link {
+    color: black !important;
+}
 
 #navbutton {
     background-color: var(--x);
+    color: white;
 }
 
 #navbutton:hover {
@@ -25,147 +35,152 @@
     border-color: var(--x);
 }
 
+/* Main background */
 #main {
     background-image: url('https://images.pexels.com/photos/262325/pexels-photo-262325.jpeg');
     background-position: center;
     background-size: cover;
-    height: 110vh;
+    height: 100vh;
     width: 100%;
     background-attachment: fixed;
 }
 
 #mainbg {
-    background-color: rgba(0, 0, 0, 0.229);
-    height: 110vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-.navbar {
-    color: white;
-    background-color: black;
-}
-
+/* Welcome Section */
 #welcome {
-    padding-top: 20%;
-    padding-left: 25%;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #welcome h4 {
     color: white;
-    font-size: 30px;
+    font-size: clamp(18px, 2vw, 30px);
 }
 
 #welcome h1 {
-    padding-left: 15%;
     color: white;
-    font-size: 50px;
+    font-size: clamp(30px, 5vw, 70px);
+    margin-top: 10px;
 }
 
-@media(max-width:992px) {
-    #welcome h4 {
-        font-size: 15px;
-    }
+/* Deals Section */
+#deals .card {
+    width: 100%;
+    max-width: 20rem;
+    margin: auto;
+    transition: transform 0.3s;
+}
 
-    #welcome h1 {
-        padding-left: 15%;
-        font-size: 25px;
-    }
-    #main{
-        height: 70vh;
-    }
+#deals .card:hover {
+    transform: scale(1.05);
+}
 
-}
-#morearrow{
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-    background-color: var(--x);
-    margin-top: 250px;
-}
-#morearrow i{
-    color: white;
-}
-#morearrow:hover {
-    background-color: white;
-    border-color: var(--x);
-}
-#morearrow i:hover{
-    color: var(--x);
-}
 #deals .btn {
     background-color: var(--x);
     border-color: var(--x);
     color: white;
 }
+
 #deals .btn:hover {
     background-color: white;
     color: var(--x);
     border-color: var(--x);
 }
-#gallery{
+
+/* Arrow */
+#morearrow {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
     background-color: var(--x);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#morearrow i {
+    color: white;
+    font-size: 20px;
+}
+
+#morearrow:hover {
+    background-color: white;
+}
+
+#morearrow:hover i {
+    color: var(--x);
+}
+
+/* Gallery */
+#gallery {
+    background-color: var(--x);
+    color: white;
+    padding: 50px 0;
+}
+
+#gallery h1 {
     color: white;
 }
 
-#gallery h1{
-    color: white;
+/* Booking */
+#booking {
+    padding: 50px 15px;
 }
-#booking form{
-    margin: 100px 450px;
+
+#booking form {
+    margin: auto;
     background-color: var(--x);
-    height: 400px;
-    width: 700px;
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
     border-radius: 20px;
 }
-#booking input{
 
-    width: 90%;
-    height: 40px;
+#booking input {
+    width: 100%;
+    height: 45px;
     color: var(--x);
     border-radius: 20px;
-    margin: 10px 50px;
-    /* background-color: var(--x); */
+    margin: 10px 0;
+    padding: 0 15px;
+    border: none;
 }
 
-#booking button{
-    margin: 50px 50px ;
-    width: 90%;
+#booking button {
+    width: 100%;
     height: 50px;
     border-radius: 20px;
-    border-color: white;
+    font-size: 20px;
+    border: 2px solid white;
     color: white;
     background-color: var(--x);
-    text-align: center;
-    font-size: 30px;
 }
-#booking button:hover{
+
+#booking button:hover {
     border-color: var(--x);
     color: var(--x);
     background-color: white;
 }
-@media(max-width:992px) {
-    #booking form {
-    margin: 55px 50px ;
-    height: 300px;
-    width: 300px;
-    }
-    #booking input{
-    margin: 5px 20px;
-    }
-    #booking button{
-    margin: 25px 20px ;
 
-    }
-}
+/* Footer */
 #footer {
     background-image: url("https://images.pexels.com/photos/28195140/pexels-photo-28195140.jpeg");
     background-size: cover;
     background-position: center;
-    width: 100%;
-    /* min-height: 40vh; */
-    position: relative;
-    margin-top: 100px;
     color: white;
-    font-size: 30px;
+    font-size: clamp(16px, 2vw, 24px);
+    position: relative;
+    margin-top: 50px;
 }
 
 #footer-overlay {
@@ -173,9 +188,13 @@
     width: 100%;
     height: 100%;
     color: white;
-    padding: 60px 20px;
+    padding: 40px 20px;
+    text-align: center;
 }
-#footer-overlay p,h5,a{
+
+#footer-overlay h5,
+#footer-overlay p,
+#footer-overlay a {
     color: white;
 }
 
@@ -183,6 +202,7 @@
     color: #ddd;
     text-decoration: none;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
